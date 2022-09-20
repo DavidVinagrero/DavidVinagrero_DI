@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.Calendar;
 import java.util.Scanner;
 
 public class MainRepaso {
@@ -17,43 +16,120 @@ public class MainRepaso {
 
     */
     public static void main(String[] args) {
-        int[] elementos =new int [50];
+
         Scanner scanner = new Scanner(System.in);
-        int opcion;
+        int[] numeros= null;
+        int opcion= 0;
 
         do{
-            System.out.println("\nRellenar 1\n"+
-                    "Listar   2\n"+
-                    "Ordenar  3\n"+
-                    "Vaciar   4\n"+
-                    "Salir    5\n"+
-                    "Opción: ");
+            System.out.println("\nRellenar   1\n"+
+                    "Listar     2\n"+
+                    "Ordenar    3\n"+
+                    "Vaciar     4\n"+
+                    "Buscar     5\n"+
+                    "Sustituir  6\n"+
+                    "Min y Mas  7\n"+
+                    "Salir      8\n"+
+                    "\nOpción: ");
             opcion= scanner.nextInt();
 
             switch (opcion){
                 case 1:
-                    for (int i=0;i<elementos.length;i++)
-                        elementos[i] = (int) (Math.random()*200)+1;
+                    if(numeros!=null){
+                        System.out.println("Ya tiene valores, ¿Quieres volver a rellenarlo?");
+                        String opcionRellenar= scanner.next();
+                        if(opcionRellenar.equalsIgnoreCase("s")){
+                            numeros= new MainRepaso().rellenarArray();
+                        } else {
+                            System.out.println("Array relleno previamente");
+                        }
+                    } else {
+                        numeros= new MainRepaso().rellenarArray();
+                    }
                     break;
+
                 case 2:
-                    for (int i = 0; i < elementos.length; i++)
-                        System.out.print(elementos[i] + ", ");
+                    for(int item:numeros){
+                        /*
+                        int posicion= 1;
+                        System.out.printf("Elemento %d: %d%n",posicion,item);
+                        posicion++;*/
+                    }
+                    for (int i = 0; i < numeros.length; i++) {
+                        System.out.printf("Elemento %d: %d%n",i+1,numeros[i]);
+                    }
                     break;
+
                 case 3:
-                    Arrays.sort(elementos);
+                    Arrays.sort(numeros);
                     break;
+
                 case 4:
-                    for (int i=0;i<elementos.length;i++)
-                        elementos[i] = 0;
+                    numeros=null;
                     break;
+
                 case 5:
+                    if(numeros!=null){
+                        System.out.println("¿Que número quieres buscar?");
+                        int numeroBuscar= scanner.nextInt();
+                        boolean encontrado= false;
+                        for(int i= 0; i< numeros.length;i++){
+                            if(numeroBuscar==numeros[i]){
+                                System.out.println("Encontrado en la posicion "+i+1);
+                                encontrado=true;
+                                break;
+                            }
+                            if(!encontrado)
+                                System.out.println("No se ha encontrado el numero");
+                        }
+                    }
+                    break;
+
+                case 6:
+                    break;
+
+                case 7:
+                    int[] clone= numeros.clone();
+                    Arrays.sort(clone);
+                    System.out.println("El max es "+clone[clone.length-1]);
+                    System.out.println("El min es "+clone[0]);
                     break;
             }
-        }while (opcion!=5);
+            try {
+                Thread.sleep(1500);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }while (opcion!=8);
 
         System.out.println("Programa terminado");
     }
+
+    public int[] rellenarArray() {
+        int[] numeros= new int[50];
+        for(int i=0;i<numeros.length;i++)
+            numeros[i] = (int) (Math.random()*200+1);
+        return numeros;
+    }
+
+    public boolean isArrayVacio(int[] numerosComprobar){
+        return numerosComprobar== null;
+    }
 }
+
+// int[][] matriz= new int[][]
+/*
+    for(i= 0; i< matriz; i++){
+        for(j= 0; matriz[i].length; j++){
+            m[i][j]
+        }
+    }
+
+    for(int[]i:matriz){
+        for(int x: i)
+    }
+*/
+
 
 
 /* Ejercicio 1
