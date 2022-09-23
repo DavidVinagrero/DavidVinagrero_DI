@@ -1,5 +1,7 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Coche {
     //Propiedades
     private int cv, velocidad;
@@ -14,6 +16,8 @@ public class Coche {
         matricula = "0000AAA";
         modelo = "Sin especificar";
         km = 0.0;
+
+        ArrayList<Coche> listaCoches= new ArrayList<>();
     }
 
     public Coche(int cv, String matricula, String modelo) {
@@ -25,7 +29,7 @@ public class Coche {
     //Métodos
     public void acelerarCoche(int velocidad) {
         this.velocidad = this.velocidad + velocidad;
-        this.km = velocidad * ((cv) * Math.random() * 30 + 10);
+        this.km = velocidad * ((cv) * Math.random() * 20+11);
         if (this.velocidad > 180) {
             this.velocidad = 180;
             System.out.println("El coche ha sobrepasado la velocidad máxima");
@@ -44,6 +48,58 @@ public class Coche {
         this.velocidad = 0;
     }
 
-    //Getter & Setter
+    public void reiniciarVelocidadKilometros(){
+        this.velocidad=0;
+        this.km=0;
+    }
 
+    //Getter & Setter
+    public int getCv() {
+        return cv;
+    }
+
+    public int getVelocidad() {
+        return velocidad;
+    }
+
+    public String getMatricula() {
+        return matricula;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public double getKm() {
+        return km;
+    }
+
+    public void setCv(int cv) {
+        this.cv = cv;
+    }
+
+    public void setVelocidad(int velocidad) {
+        this.velocidad = velocidad;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public void setKm(double km) {
+        this.km = km;
+    }
+
+    @Override
+    public String toString() {
+        return "Matrícula: " +matricula+
+                " Modelo: "+modelo+
+                " CV: "+cv+
+                " Velocidad: "+velocidad+
+                " Kilómetros: "+km;
+    }
 }

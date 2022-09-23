@@ -1,0 +1,23 @@
+import model.*;
+
+import java.util.ArrayList;
+
+public class MainTrabajadores {
+    public static void main(String[] args) {
+        Autonomo autonomo= new Autonomo("Pedro","Gómez","1234567A",1234,1000,10000);
+        Asalariado asalariado= new Asalariado("Juan","García","1234567B",5678,15,600,3000);
+        Jefe jefe= new Jefe("Antonio","Hernández","123456C",7891,'B');
+
+        ArrayList<Trabajador> listaEmpresa= new ArrayList<>();
+        listaEmpresa.add(autonomo);
+        listaEmpresa.add(asalariado);
+        listaEmpresa.add(jefe);
+
+        for (Trabajador trabajador: listaEmpresa) {
+            System.out.println("\nMostrando los datos del trabajador: ");
+            trabajador.mostrarDatos();
+            System.out.println("Calcular jubilación");
+            trabajador.calcularJubilacion();
+        }
+    }
+}
