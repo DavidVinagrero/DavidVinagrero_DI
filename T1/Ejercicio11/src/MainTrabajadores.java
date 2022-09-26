@@ -18,6 +18,10 @@ public class MainTrabajadores {
             trabajador.mostrarDatos();
             System.out.println("Calcular jubilación");
             trabajador.calcularJubilacion();
+
+            if(trabajador instanceof Asalariado){
+                ((Asalariado)trabajador).mostrarSueldoNeto(10);
+            }
         }
     }
 }
