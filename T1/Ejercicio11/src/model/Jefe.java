@@ -1,6 +1,6 @@
 package model;
 
-public final class Jefe extends Trabajador{
+public final class Jefe extends Trabajador implements Votante{
     //Variables
     private char nivelResponsabilidad;
 
@@ -10,7 +10,7 @@ public final class Jefe extends Trabajador{
         this.nivelResponsabilidad= nivelResponsabilidad;
     }
 
-    //Funciones
+    //Métodos override
     @Override
     public void mostrarDatos() {
         super.mostrarDatos();
@@ -33,6 +33,11 @@ public final class Jefe extends Trabajador{
                 break;
         }
         System.out.println("La jubilación resultante es "+jubilacion);
+    }
+
+    @Override
+    public int votar(int voto) {
+        return voto/3;
     }
 
     //Getter y Setter

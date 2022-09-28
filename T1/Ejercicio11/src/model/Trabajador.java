@@ -22,11 +22,8 @@ public abstract class Trabajador extends Persona {
     @Override
     public void mostrarDatos() {
         super.mostrarDatos();
-        System.out.println("NSS: "+NSS);
+        System.out.println("NSS: " + NSS);
     }
 
-    @Override
-    public void calcularJubilacion() {
-
-    }
+    public abstract void calcularJubilacion();
 }
