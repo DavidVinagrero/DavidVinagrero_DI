@@ -2,6 +2,32 @@ package model;
 
 public class Carta {
     //Variables
-    final int valores[] = {1,2,3,4,5,6,7,10,11,12};
-    final String palos[]= {"Oros","Espadas","Bastos","Copas"};
+    private int numero;
+    private String palo;
+    public static final String[] PALOS= {"Espadas","Oros","Bastos","Copas"};
+
+    //Constructores
+    public Carta(int numero, String palo) {
+        this.numero = numero;
+        this.palo = palo;
+    }
+
+    //Funciones
+    @Override
+    public String toString() {
+        return "numero: "+numero+"\npalo: "+palo;
+    }
+
+    //Getter y Setter
+    public int getNumero() {
+        return numero;
+    }
+
+    public String getPalo() {
+        return palo;
+    }
+
+    public String[] getPALOS() {
+        return PALOS;
+    }
 }
