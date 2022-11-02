@@ -1,7 +1,6 @@
-package com.example.pestanias;
+package com.example.penstanias_ret;
 
-import com.example.pestanias.model.CambioBase;
-import com.example.pestanias.model.CambioBase;
+import com.example.penstanias_ret.model.CambioBase;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
