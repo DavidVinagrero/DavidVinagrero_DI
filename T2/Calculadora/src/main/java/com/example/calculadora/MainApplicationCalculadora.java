@@ -7,11 +7,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MainApplication extends Application {
+public class MainApplicationCalculadora extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("main-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplicationCalculadora.class.getResource("hello-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 620, 440);
         stage.setTitle("Calculadora");
         stage.setScene(scene);
         stage.show();
