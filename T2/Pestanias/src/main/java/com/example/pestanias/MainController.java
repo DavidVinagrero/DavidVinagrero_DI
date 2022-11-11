@@ -77,6 +77,42 @@ public class MainController implements Initializable {
 
     }
 
+    private void instancias() {
+        sombreExterior = new DropShadow();
+        grupoRadios = new ToggleGroup();
+        grupoRadios.getToggles().addAll(radioUno, radioDos, radioTres);
+
+        listaChoice = FXCollections.observableArrayList();
+        listaChoice.addAll("OpcionCh1", "OpcionCh2",
+                "OpcionCh3", "OpcionCh4");
+        listaCombo = FXCollections.observableArrayList();
+        listaCombo.addAll("OpcionCb1", "OpcionCb2",
+                "OpcionCb3", "OpcionCb4");
+
+        listaSpinner = FXCollections.observableArrayList();
+        listaSpinner.addAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+        listaUsuarios = FXCollections.observableArrayList();
+        listaUsuarios.addAll(
+                new Usuario("nombre1", "apellido1", "correo@correo.com", 1),
+                new Usuario("nombre2", "apellido2", "correo@correo.com", 2),
+                new Usuario("nombre3", "apellido3", "correo@correo.com", 3),
+                new Usuario("nombre4", "apellido4", "correo@correo.com", 4)
+        );
+
+        listaListView = FXCollections.observableArrayList();
+        listaListView.addAll(
+                new Usuario("nombre1", "apellido1", "correo@correo.com", 1),
+                new Usuario("nombre2", "apellido2", "correo@correo.com", 2),
+                new Usuario("nombre3", "apellido3", "correo@correo.com", 3),
+                new Usuario("nombre4", "apellido4", "correo@correo4.com", 4),
+                new Usuario("nombre5", "apellido5", "correo@correo.com", 5),
+                new Usuario("nombre6", "apellido6", "correo@correo.com", 6)
+        );
+
+
+    }
+
     private void initGUI() {
         panelGeneral.getChildren().remove(panelVisible);
     }
@@ -173,42 +209,6 @@ public class MainController implements Initializable {
         botonNormal.addEventHandler(MouseEvent.MOUSE_EXITED, new ManejoRaton());
         botonNormalDos.addEventHandler(MouseEvent.MOUSE_ENTERED, new ManejoRaton());
         botonNormalDos.addEventHandler(MouseEvent.MOUSE_EXITED, new ManejoRaton());
-
-
-    }
-
-    private void instancias() {
-        sombreExterior = new DropShadow();
-        grupoRadios = new ToggleGroup();
-        grupoRadios.getToggles().addAll(radioUno, radioDos, radioTres);
-
-        listaChoice = FXCollections.observableArrayList();
-        listaChoice.addAll("OpcionCh1", "OpcionCh2",
-                "OpcionCh3", "OpcionCh4");
-        listaCombo = FXCollections.observableArrayList();
-        listaCombo.addAll("OpcionCb1", "OpcionCb2",
-                "OpcionCb3", "OpcionCb4");
-
-        listaSpinner = FXCollections.observableArrayList();
-        listaSpinner.addAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-
-        listaUsuarios = FXCollections.observableArrayList();
-        listaUsuarios.addAll(
-                new Usuario("nombre1", "apellido1", "correo@correo.com", 1),
-                new Usuario("nombre2", "apellido2", "correo@correo.com", 2),
-                new Usuario("nombre3", "apellido3", "correo@correo.com", 3),
-                new Usuario("nombre4", "apellido4", "correo@correo.com", 4)
-        );
-
-        listaListView = FXCollections.observableArrayList();
-        listaListView.addAll(
-                new Usuario("nombre1", "apellido1", "correo@correo.com", 1),
-                new Usuario("nombre2", "apellido2", "correo@correo.com", 2),
-                new Usuario("nombre3", "apellido3", "correo@correo.com", 3),
-                new Usuario("nombre4", "apellido4", "correo@correo4.com", 4),
-                new Usuario("nombre5", "apellido5", "correo@correo.com", 5),
-                new Usuario("nombre6", "apellido6", "correo@correo.com", 6)
-        );
 
 
     }
