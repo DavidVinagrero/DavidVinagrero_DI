@@ -21,7 +21,7 @@ public class MainControllerCalculadora implements Initializable {
 
     @FXML
     private Button boton_sumar, boton_restar, boton_registro, boton_igual, boton_multiplicar, boton_dividir, boton_ocultar, boton_cientifica,
-            boton_limpiar;
+            boton_limpiar, boton_porcentaje;
 
     @FXML
     private GridPane panel_visible;
@@ -59,6 +59,8 @@ public class MainControllerCalculadora implements Initializable {
         boton_dividir.setOnAction(new ManejoPulsaciones());
         boton_multiplicar.setOnAction(new ManejoPulsaciones());
         boton_registro.setOnAction(new ManejoPulsaciones());
+        boton_porcentaje.setOnAction(new ManejoPulsaciones());
+        boton_restar.setOnAction(new ManejoPulsaciones());
 
         boton_cero.setOnAction(new ManejoPulsaciones());
         boton_uno.setOnAction(new ManejoPulsaciones());
@@ -169,6 +171,26 @@ public class MainControllerCalculadora implements Initializable {
                     System.out.println("Operando 1 = " + operando1 + "\nTipo operacion = " + tipoOperacion);
                 }
 
+            } else if (actionEvent.getSource() == boton_porcentaje) {
+                if (tipoOperacion <= 3 || tipoOperacion >= 0) {
+                    operando2 = Double.parseDouble(etiqueta_resultado.getText().replaceAll("[%]", ""));
+                    Double porcentaje = (operando1 * 100) / operando2;
+                    switch (tipoOperacion) {
+                        case 1:
+                            // Calcula el aumento
+                            porcentaje += operando1;
+                            etiqueta_resultado.setText(porcentaje + "");
+                            reiniciarValores();
+                            break;
+
+                        case 2:
+                            // Calcula el descuento
+                            porcentaje -= operando1;
+                            etiqueta_resultado.setText(((porcentaje * 100.0) / 100.0) + "");
+                            reiniciarValores();
+                            break;
+                    }
+                }
             } else if (actionEvent.getSource() == boton_coma) {
                 if (!pulsado_coma) {
                     pulsado_coma = true;
