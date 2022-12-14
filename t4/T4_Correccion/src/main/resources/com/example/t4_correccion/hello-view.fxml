@@ -84,10 +84,10 @@
                   <Insets top="5.0" />
                </GridPane.margin>
             </Button>
-            <Label fx:id="labelNombre" text="Label" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Label fx:id="labelCorreo" text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Label fx:id="labelDNI" text="Label" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Label fx:id="labelTelefono" text="Label" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label fx:id="labelNombre" text="____" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label fx:id="labelCorreo" text="____" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label fx:id="labelDNI" text="____" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label fx:id="labelTelefono" text="____" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
          </children>
       </GridPane>
    </bottom>

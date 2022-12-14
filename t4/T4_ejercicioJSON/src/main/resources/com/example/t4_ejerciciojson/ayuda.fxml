@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.t4_ejerciciojson.AyudaController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="104.66668701171875" minHeight="10.0" prefHeight="104.66668701171875" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="117.33333672417535" minHeight="10.0" prefHeight="94.66666666666666" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="192.88888210720484" minHeight="0.0" prefHeight="29.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="125.99999321831598" minHeight="10.0" prefHeight="82.88888888888891" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="125.99999321831598" minHeight="10.0" prefHeight="120.6666497124566" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Button fx:id="botonVolver" mnemonicParsing="false" text="Volver" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+      <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="Para buscar una frase de un mismo personaje&#10;debes escribir parte de su nombre, el nombre &#10;completo o elegirlo del desplegable (siempre &#10;que ya haya salido ese personaje)." wrapText="true">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </TextArea>
+      <ImageView fx:id="imagen" fitHeight="110.0" fitWidth="253.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets left="30.0" top="10.0" />
+         </GridPane.margin>
+      </ImageView>
+      <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="Si no sale ningún resultado o salen muy pocos&#10;es probablemente porque esta API no posee &#10;frases para todos los personajes, ¿ Sabías que &#10;Ned Flanders no tiene frases ? " GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </TextArea>
+   </children>
+</GridPane>
