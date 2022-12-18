@@ -21,7 +21,7 @@ public class MainControllerCalculadora implements Initializable {
 
     @FXML
     private Button boton_sumar, boton_restar, boton_registro, boton_igual, boton_multiplicar, boton_dividir, boton_ocultar, boton_cientifica,
-            boton_limpiar, boton_porcentaje;
+            boton_limpiar, boton_porcentaje, boton_log, boton_sin, boton_raiz, boton_elevar, boton_in, boton_cos;
 
     @FXML
     private GridPane panel_visible;
@@ -61,6 +61,12 @@ public class MainControllerCalculadora implements Initializable {
         boton_registro.setOnAction(new ManejoPulsaciones());
         boton_porcentaje.setOnAction(new ManejoPulsaciones());
         boton_restar.setOnAction(new ManejoPulsaciones());
+        boton_log.setOnAction(new ManejoPulsaciones());
+        boton_in.setOnAction(new ManejoPulsaciones());
+        boton_elevar.setOnAction(new ManejoPulsaciones());
+        boton_raiz.setOnAction(new ManejoPulsaciones());
+        boton_cos.setOnAction(new ManejoPulsaciones());
+        boton_sin.setOnAction(new ManejoPulsaciones());
 
         boton_cero.setOnAction(new ManejoPulsaciones());
         boton_uno.setOnAction(new ManejoPulsaciones());
@@ -204,9 +210,33 @@ public class MainControllerCalculadora implements Initializable {
                     }
                 }
 
+            } else if (actionEvent.getSource() == boton_log) {
+                operando1 = Double.parseDouble(etiqueta_resultado.getText().replaceAll("[log]", ""));
+                setOperacion(5);
+
+            } else if (actionEvent.getSource() == boton_in) {
+                operando1 = Double.parseDouble(etiqueta_resultado.getText().replaceAll("[in]", ""));
+                setOperacion(6);
+
+            } else if (actionEvent.getSource() == boton_elevar) {
+                operando1 = Double.parseDouble(etiqueta_resultado.getText().replaceAll("[∧]", ""));
+                etiqueta_resultado.setText("");
+                setOperacion(7);
+
+            } else if (actionEvent.getSource() == boton_raiz) {
+                setOperacion(8);
+
+            } else if (actionEvent.getSource() == boton_cos) {
+                setOperacion(9);
+
+            } else if (actionEvent.getSource() == boton_sin) {
+                setOperacion(10);
+
             } else if (actionEvent.getSource() == boton_igual) {
                 if (tipoOperacion != 0) {
-                    operando2 = Double.parseDouble(etiqueta_resultado.getText().replaceAll("[=]", ""));
+                    if (tipoOperacion < 5) {
+                        operando2 = Double.parseDouble(etiqueta_resultado.getText().replaceAll("[=]", ""));
+                    }
 
                     // Calcular tipo de operacion
                     switch (tipoOperacion) {
@@ -215,7 +245,7 @@ public class MainControllerCalculadora implements Initializable {
                             System.out.println("Operando 2 = " + operando2);
                             System.out.println("Resultado = " + resultado);
                             etiqueta_resultado.setText("" + ((int) resultado));
-                            text_registro.appendText("" + (operando1) + " + " + (operando2) + "\n=" + Math.round(resultado * 100.0) / 100.0);
+                            text_registro.appendText((operando1) + " + " + (operando2) + "\n=" + Math.round(resultado * 100.0) / 100.0 + "\n\n");
                             reiniciarValores();
                             break;
 
@@ -223,21 +253,72 @@ public class MainControllerCalculadora implements Initializable {
                             resultado = operando1 - operando2;
                             System.out.println("Resultado = " + resultado);
                             etiqueta_resultado.setText("" + ((int) resultado));
+                            text_registro.appendText((operando1) + " - " + (operando2) + "\n=" + Math.round(resultado * 100.0) / 100.0 + "\n\n");
+                            reiniciarValores();
                             break;
 
                         case 3:
                             resultado = operando1 * operando2;
                             System.out.println("Resultado = " + resultado);
                             etiqueta_resultado.setText("" + ((int) resultado));
+                            text_registro.appendText((operando1) + " x " + (operando2) + "\n=" + Math.round(resultado * 100.0) / 100.0 + "\n\n");
+                            reiniciarValores();
                             break;
 
                         case 4:
                             resultado = operando1 / operando2;
                             System.out.println("Resultado = " + resultado);
                             etiqueta_resultado.setText("" + resultado);
+                            text_registro.appendText((operando1) + " ÷ " + (operando2) + "\n=" + Math.round(resultado * 100.0) / 100.0 + "\n\n");
+                            reiniciarValores();
                             break;
 
+                        case 5:
+                            operando1 = Double.parseDouble(etiqueta_resultado.getText().replaceAll("[log]", "").replaceAll("[=]", ""));
+                            resultado = Math.log10(operando1);
+                            etiqueta_resultado.setText("" + resultado);
+                            text_registro.appendText("log(" + (operando1) + ") \n=" + Math.round(resultado * 100.0) / 100.0 + "\n\n");
+                            reiniciarValores();
+                            break;
 
+                        case 6:
+                            operando1 = Double.parseDouble(etiqueta_resultado.getText().replaceAll("[in]", "").replaceAll("[=]", ""));
+                            resultado = Math.log(operando1);
+                            etiqueta_resultado.setText("" + resultado);
+                            text_registro.appendText("In(" + (operando1) + ") \n=" + Math.round(resultado * 100.0) / 100.0 + "\n\n");
+                            reiniciarValores();
+                            break;
+
+                        case 7:
+                            operando2 = Double.parseDouble(etiqueta_resultado.getText().replaceAll("[in]", "").replaceAll("[=]", ""));
+                            resultado = Math.pow(operando1, operando2);
+                            etiqueta_resultado.setText("" + resultado);
+                            reiniciarValores();
+                            break;
+
+                        case 8:
+                            operando1 = Double.parseDouble(etiqueta_resultado.getText().replaceAll("√", "").replaceAll("[=]", ""));
+                            resultado = Math.sqrt(operando1);
+                            etiqueta_resultado.setText("" + resultado);
+                            text_registro.appendText("√" + operando1 + "\n=" + Math.round(resultado * 100.0) / 100.0 + "\n\n");
+                            reiniciarValores();
+                            break;
+
+                        case 9:
+                            operando1 = Double.parseDouble(etiqueta_resultado.getText().replaceAll("[cos]", "").replaceAll("[=]", ""));
+                            resultado = Math.cos(operando1);
+                            text_registro.appendText("cos(" + operando1 + ")\n=" + Math.round(resultado * 100.0) / 100.0 + "\n\n");
+                            etiqueta_resultado.setText("" + resultado);
+                            reiniciarValores();
+                            break;
+
+                        case 10:
+                            operando1 = Double.parseDouble(etiqueta_resultado.getText().replaceAll("[sin]", "").replaceAll("[=]", ""));
+                            resultado = Math.sin(operando1);
+                            text_registro.appendText("sin(" + operando1 + ")\n=" + Math.round(resultado * 100.0) / 100.0 + "\n\n");
+                            etiqueta_resultado.setText("" + resultado);
+                            reiniciarValores();
+                            break;
                     }
 
 
@@ -285,6 +366,12 @@ public class MainControllerCalculadora implements Initializable {
              2 -> Resta
              3 -> Multiplicacion
              4 -> Division
+             5 -> Logaritmo
+             6 -> Logaritmo e
+             7 -> Elevar
+             8 -> Raiz cuadrada
+             9 -> Coseno
+             10 -> Seno
              */
             tipoOperacion = i;
         }

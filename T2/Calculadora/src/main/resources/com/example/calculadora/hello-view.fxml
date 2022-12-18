@@ -50,37 +50,37 @@
             </Button>
             <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="+/-" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
-                  <Font size="15.0" />
+                  <Font size="20.0" />
                </font>
             </Button>
             <Button fx:id="boton_porcentaje" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="\%" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
-                  <Font size="15.0" />
+                  <Font size="20.0" />
                </font>
             </Button>
             <Button fx:id="boton_dividir" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="÷" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <font>
-                  <Font size="15.0" />
+                  <Font size="20.0" />
                </font>
             </Button>
             <Button fx:id="boton_nueve" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="9" GridPane.rowIndex="3">
                <font>
-                  <Font size="15.0" />
+                  <Font size="20.0" />
                </font>
             </Button>
             <Button fx:id="boton_ocho" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="8" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
-                  <Font size="15.0" />
+                  <Font size="20.0" />
                </font>
             </Button>
             <Button fx:id="boton_siete" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="7" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <font>
-                  <Font size="15.0" />
+                  <Font size="20.0" />
                </font>
             </Button>
             <Button fx:id="boton_seis" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="6" GridPane.rowIndex="4">
                <font>
-                  <Font size="15.0" />
+                  <Font size="20.0" />
                </font>
             </Button>
             <Button fx:id="boton_cinco" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="5" GridPane.columnIndex="1" GridPane.rowIndex="4">
@@ -130,7 +130,7 @@
             </Button>
             <Button fx:id="boton_multiplicar" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="x" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <font>
-                  <Font size="15.0" />
+                  <Font size="20.0" />
                </font>
             </Button>
             <Button fx:id="boton_sumar" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4">
@@ -166,28 +166,28 @@
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="sin" GridPane.rowIndex="1">
+            <Button fx:id="boton_sin" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="sin" GridPane.rowIndex="1">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="x!" GridPane.rowIndex="2">
+            <Button fx:id="boton_cos" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="cos" GridPane.rowIndex="2">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="√" GridPane.rowIndex="3">
+            <Button fx:id="boton_raiz" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="√" GridPane.rowIndex="3">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="∧" GridPane.rowIndex="4" />
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="in" GridPane.rowIndex="5">
+            <Button fx:id="boton_elevar" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="∧" GridPane.rowIndex="4" />
+            <Button fx:id="boton_in" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="in" GridPane.rowIndex="5">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="e" GridPane.rowIndex="6">
+            <Button fx:id="boton_log" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="log" GridPane.rowIndex="6">
                <font>
                   <Font size="15.0" />
                </font>

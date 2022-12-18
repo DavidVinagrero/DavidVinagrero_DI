@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01b46d79-9ca7-4a4a-8a07-c98653157e74" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../T1/PacientesExamen/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../t4/T4_ejercicioJSON/src/main/java/com/example/t4_ejerciciojson/AyudaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../t4/T4_ejercicioJSON/src/main/java/com/example/t4_ejerciciojson/TablaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../t4/T4_ejercicioJSON/src/main/java/com/example/t4_ejerciciojson/model/Personaje.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../t4/T4_ejercicioJSON/src/main/resources/images/fondo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../T1/PacientesExamen/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../T1/PacientesExamen/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/calculadora/MainControllerCalculadora.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/calculadora/MainControllerCalculadora.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/calculadora/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/calculadora/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +30,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/david/Documents/DAM2/Repositorios/DavidVinagrero_DI/T2/Penstanias_Ret"
+    "last_opened_file_path": "C:/Users/david/Documents/DAM2/Repositorios/DavidVinagrero_DI/T2/Calculadora"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
