@@ -1,43 +1,15 @@
-let equipoMadrid = [];
-let equipoBarsa = [];
-let equipoAtleti = [];
+let equipoMadrid = new equipo("Madrid",150000);
+let equipoBarcelona = new equipo("Barcelona",1300000);
+let equipoAtletico = new equipo("Atletico",1450000);
 
-let jugador = {
-    nombre: "",
-    posicion: "",
-    valor: 0
-};
+equipoMadrid.addJugador(new Jugador("vallejo", "Defensa",10000));
+equipoMadrid.addJugador(new Jugador("Benzema", "Delantero",10000));
 
-// Crea una función en la clase Equipo que se llame addJugador y admita por parámetros un jugador. 
-function addJugador(nombre, posicion, valor) {
-    jugador.nombre = nombre;
-    jugador.posicion = posición;
-    jugador.valor = valor;
-}
-let equipo = {
-    nombre: "",
-    plantilla: "",
-    presupuesto: 0,
+setTimeout(()=>{
+    equipoMadrid.addJugador(new Jugador("Benzema", "Delantero",50000));
+}, 5000);
 
-    addJugador: function (nombre, posicion, valor){
-        this.plantilla = jugador(nombre, posicion, valor);
-        this.presupuesto -= valor;        
-    }, 
+equipoMadrid.listarPlantilla();
 
-    listarEquipos: function (equipo) {
-        console.log(equipo);
-    },
-    listarPlantilla: function (plantilla) {
-        console.log(plantilla.jugador.nombre);
-        console.log(plantilla.jugador.posicion);
-        console.log(plantilla.jugador.valor);
-    },
-    listarPosicion: function (posicion) {
-        if(jugador.posicion == posicion) {
-            console.log(plantilla.jugador.nombre);
-            console.log(plantilla.jugador.posicion);
-            console.log(plantilla.jugador.valor);
-        }
-    }
-}
+let liga = [equipoAtletico, equipoBarcelona, equipoMadrid];
 
