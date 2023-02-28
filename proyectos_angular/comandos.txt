@@ -4,6 +4,7 @@ npm install typescript -g
 tsc *.ts 
 tsc *.ts --watch
 
-ng new inicio --skip-tests
+ng new inicio --skip-tests --prefix directivas
 npm install (problemas durante la instalacion)
 ng g c components/uno (g-> generar, c-> componente)
+
