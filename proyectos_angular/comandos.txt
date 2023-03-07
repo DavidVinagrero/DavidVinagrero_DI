@@ -6,5 +6,6 @@ tsc *.ts --watch
 
 ng new inicio --skip-tests --prefix directivas
 npm install (problemas durante la instalacion)
-ng g c components/uno (g-> generar, c-> componente)
 
+ng g c components/uno (g-> generar, c-> componente)
+ng g s service/asignaturas (s -> servicio)

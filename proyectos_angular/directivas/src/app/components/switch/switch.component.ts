@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./switch.component.css']
 })
 export class SwitchComponent {
+  seleccion = -1;
 
+  cambioRadio(evento: any) {
+    this.seleccion = Number(evento.target.value);
+  }
 }

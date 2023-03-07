@@ -8,6 +8,7 @@ import { SwitchComponent } from './components/switch/switch.component';
 import { Componente1Component } from './components/componente1/componente1.component';
 import { Componente2Component } from './components/componente2/componente2.component';
 import { Componente3Component } from './components/componente3/componente3.component';
+import { ComponenteforComponent } from './components/componentefor/componentefor.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { Componente3Component } from './components/componente3/componente3.compo
     SwitchComponent,
     Componente1Component,
     Componente2Component,
-    Componente3Component
+    Componente3Component,
+    ComponenteforComponent
   ],
   imports: [
     BrowserModule,

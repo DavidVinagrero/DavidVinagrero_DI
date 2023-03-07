@@ -1,10 +1,43 @@
-<h1>Elige un componente</h1>
-<input type="radio" name="f" id="1" #inputRadio/><label for="1">&nbsp;Compnente 1</label><br>
-<input type="radio" name="f" id="2" #inputRadio/><label for="2">&nbsp;Compnente 2</label><br>
-<input type="radio" name="f" id="3" #inputRadio/><label for="3">&nbsp;Compnente 3</label>
+<h1>Directiva switch</h1>
+<p>La directiva switch evalua un caso concreto para pintar una etiqueta</p>
 
-<!-- <div [ngSwitch]="seleccion">
+<div class="form-check form-check-inline">
+  <input
+    class="form-check-input"
+    type="radio"
+    name="inlineRadioOptions"
+    value="1"
+    (change)="cambioRadio($event)"
+  />
+  <label class="form-check-label" for="inlineRadio1">Componente 1</label>
+</div>
+<div class="form-check form-check-inline">
+  <input
+    class="form-check-input"
+    type="radio"
+    name="inlineRadioOptions"
+    value="2"
+    (change)="cambioRadio($event)"
+  />
+  <label class="form-check-label" for="inlineRadio2">Componente 2</label>
+</div>
+<div class="form-check form-check-inline">
+  <input
+    class="form-check-input"
+    type="radio"
+    name="inlineRadioOptions"
+    value="3"
+    #radio1
+    (change)="cambioRadio($event)"
+  />
+  <label class="form-check-label" for="inlineRadio3">Componente 3</label>
+</div>
+
+<div [ngSwitch]="seleccion">
   <directivas-componente1 *ngSwitchCase="1"></directivas-componente1>
-  <directivas-componente1 *ngSwitchCase="2"></directivas-componente1>
-  <directivas-componente1 *ngSwitchCase="3"></directivas-componente1>
-</div> -->
+  <directivas-componente2 *ngSwitchCase="2"></directivas-componente2>
+  <directivas-componente3 *ngSwitchCase="3"></directivas-componente3>
+  <div *ngSwitchDefault class="alert alert-primary" role="alert">
+    Por favor selecciona radio
+  </div>
+</div>

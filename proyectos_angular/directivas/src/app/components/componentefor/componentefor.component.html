@@ -1,0 +1,39 @@
+<h1>Directiva for</h1>
+<p>
+  Directiva que permite recuperar elementos de una coleccion y repetir un bloque
+  html con dichos elementos
+</p>
+<div class="row">
+  <div class="col">
+    <div>
+      <input
+        type="text"
+        placeholder="Por favor introduce nombre del li"
+        #inputLI
+      />
+      <button (click)="agregarLi(inputLI.value)">Agregar</button>
+    </div>
+
+    <ul>
+      <li *ngFor="let item of coleccionElementos; let i = index">
+        {{ item }}
+      </li>
+      <!-- Repite este elemnto, y para cada repeticion utiliza la iteración de una colccion -->
+    </ul>
+  </div>
+  <div class="col">
+    <div>
+      <input
+        type="number"
+        placeholder="Por favor introduce filtro"
+        #inputFiltro
+      />
+      <button (click)="filtrarElementos(inputFiltro.value)">Filtrar</button>
+    </div>
+    <ul>
+      <li *ngFor="let item of coleccionElementosFiltrados; let i = index">
+        {{ i }} {{ item }}
+      </li>
+    </ul>
+  </div>
+</div>
