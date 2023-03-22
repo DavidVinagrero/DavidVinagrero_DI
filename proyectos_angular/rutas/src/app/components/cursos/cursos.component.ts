@@ -20,7 +20,6 @@ export class CursosComponent {
       this.curso = parametros['curso'];
       this.asignaturas = servicio.getAsignaturasCiclo(this.curso);
       // console.log(this.asignaturas.length);
-
     });
   }
 }
